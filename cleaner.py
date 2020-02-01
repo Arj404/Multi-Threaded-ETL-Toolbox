@@ -5,4 +5,5 @@ for line in file:
 		continue
 	else:
 		export.write(line)
-	
+file.close()
+export.close()

@@ -19,3 +19,5 @@ for line in file:
 					else:
 						s=1
 				export.write(word)
+file.close()
+export.close()

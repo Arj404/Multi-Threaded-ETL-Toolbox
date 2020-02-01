@@ -8,3 +8,5 @@ c=0
 for line in file2:
 	c=c+1
 print(c)
+file1.close()
+file2.close()
