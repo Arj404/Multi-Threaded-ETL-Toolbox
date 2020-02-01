@@ -1,7 +1,8 @@
 import sqlite3
 connection = sqlite3.connect("cars-database.db")
 crsr = connection.cursor()
-sql_command = """CREATE TABLE cars (  
+sql_command = """"""
+sql_command = """CREATE TABLE newcars (  
 staff_number INTEGER PRIMARY KEY,  
 fname VARCHAR(20),  
 lname VARCHAR(30),  
