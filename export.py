@@ -1,11 +1,15 @@
 import sqlite3
+import pandas as pd
+
+# .open cars-database.db
 connection = sqlite3.connect("cars-database.db")
 crsr = connection.cursor()
-sql_command = """CREATE TABLE cars (  
-staff_number INTEGER PRIMARY KEY,  
-fname VARCHAR(20),  
-lname VARCHAR(30),  
-gender CHAR(1),  
-joining DATE);"""
-  
-crsr.execute(sql_command) 
+
+
+sql = """SELECT * from cars"""
+crsr.execute(sql)
+data = crsr.fetchall();
+df = pd.DataFrame(data)
+df.to_csv('data-export.csv')
+connection.commit()
+connection.close()
